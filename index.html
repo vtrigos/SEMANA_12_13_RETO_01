@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero BCP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="pantallaBienvenida" class="pantalla pantallOn container bodyBienvenida">
+        <div class="container buttonBienvenida">
+            <button id="btnContinuarBienvenida" class="buttonStyle">Continuar <i
+                    class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <div id="pantallaWait" class="pantalla container bodyWait">
+    </div>
+    <div id="pantallaPassOk" class="pantalla container bodyPassOk">
+    </div>
+
+    <div id="pantallaDni" class="pantalla container bodyDni">
+        <div class="contDni">
+            <div class="topGridDni">
+                <h2>Ingresa tu número DNI</h2>
+                <p class="textPant">para empezar tu sesión</p>
+                <form id="formIngreso">
+                    <input type="text" autocomplete="off" id="dniInput" required />
+                    <div class="posButton">
+                        <button type="submit" id="ingresar" class="buttonStyle">Ingresar</button>
+                    </div>
+                    <div id="mensajeErrorDni" class="msjError"></div>
+                </form>
+            </div>
+
+            <div class="buttonTop">
+                <button type="button" id="volverBienvenidaDni" class="buttonStyle">Salir <i
+                        class="fa-solid fa-arrow-right-to-bracket"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="pantallaAviso" class="pantalla container bodyAviso">
+        <div class="container buttonAviso">
+            <button id="btnContinuarAviso" class="buttonStyle">Continuar</button>
+        </div>
+    </div>
+
+    <div id="pantallaOperaciones" class="pantalla container bodyOperaciones">
+
+        <div class="headOperaciones">
+            <div>
+                <p>Bienvenido</p>
+                <p class="textHeadOper">¿Qué operación quieres hacer hoy?</p>
+            </div>
+            <div>
+                <button id="volverPantallaBienvenida" class="buttonStyle">Salir <i
+                        class="fa-solid fa-arrow-right-to-bracket"></i></button>
+            </div>
+        </div>
+        <div class="gridOperaciones">
+            <div class="operacion">
+                <button id="opRetirarMonto" class="buttonStyleOper01">
+                    <p><i class="fa-regular fa-credit-card"></i></p>
+                    <p>Retirar</p>
+                    <p>Efectivo</p>
+                    <hr>
+                </button>
+            </div>
+            <div class="operacion buttonStyleOper02">
+                <p><i class="fa-solid fa-piggy-bank"></i> Retiro favorito</p>
+                <p class="textStyleOpera02">Guarda un monto</p>
+                <p class="textStyleOpera02">frecuente y obtén las</p>
+                <p class="textStyleOpera02">mejores promociones</p>
+            </div>
+            <div class="operacion">
+                <button id="opConsultarSaldo" class="buttonStyleOper03">
+                    <p>Consultar</p>
+                    <p>Efectivo</p>
+                    <hr>
+                </button>
+            </div>
+            <div class="operacion">
+                <button id="opDepositarMonto" class="buttonStyleOper03">
+                    <p>Depositar</p>
+                    <p>Efectivo</p>
+                    <hr>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="pantallaPassword" class="pantalla container bodyPassword">
+        <div class="contPass">
+            <div class="topGridPass">
+                <div>
+                    <h2>Ingrese su contraseña</h2>
+                    <p class="textPant">para identificación</p>
+                    <input type="password" autocomplete="off" id="passwordInput" placeholder="4 Números" required />
+                    <div class="posButton">
+                        <button id="btnIngresarPassword" class="buttonStyle">Verificar</button>
+                    </div>
+                    <div id="mensajeErrorPassword" class="msjError"></div>
+                </div>
+            </div>
+
+            <div class="buttonTop">
+                <button type="button" id="volverOperacionesDesdePassword" class="buttonStyle"><i
+                        class="fa-solid fa-arrow-left"></i> Volver</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="pantallaSaldo" class="pantalla container bodySalida">
+
+        <div class="contRet">
+            <div class="topGridRet">
+                <div>
+                    <h2>Efectivo Disponible</h2>
+                    <div id="resultadoSaldo" class="buttonTopSalida"></div>
+                    <div class="posButton">
+                        <button id="volverOperacionesDesdeSaldo" class="buttonStyle"><i
+                                class="fa-solid fa-arrow-left"></i> Volver</button>
+                    </div>
+                </div>
+            </div>
+            <div class="buttonTop">
+                <button id="salirDesdeSaldo" class="buttonStyle">Salir <i
+                        class="fa-solid fa-arrow-right-to-bracket"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="pantallaDeposito" class="pantalla container bodyDeposito">
+
+        <div class="headDeposito">
+            <div>
+                <p>Depósito de efectivo</p>
+                <p class="textHeadOper">Ingrese el monto a depositar</p>
+            </div>
+
+            <div>
+                <button id="volverOperaciones" class="buttonStyle"><i class="fa-solid fa-arrow-left"></i>
+                    Volver</button>
+            </div>
+        </div>
+
+        <div class="inputDeposito">
+
+            <h2>Monto a depositar</h2>
+
+            <input type="number" autocomplete="off" id="montoDeposito" placeholder="S/ 0" required />
+
+            <div class="topDeposito">
+                <button id="realizarDeposito" class="buttonStyle">Confirmar</button>
+            </div>
+
+            <div id="resultadoDeposito" class="msjError buttonTop"></div>
+
+        </div>
+
+    </div>
+
+    <div id="pantallaRetiro" class="pantalla container bodyOperaciones">
+        <div class="headRetirosF">
+            <div>
+                <p>Retiro de efectivo</p>
+                <p class="textHeadOper">Ingresa o selecciona el monto a retirar</p>
+            </div>
+
+            <div>
+                <button id="volverOperacionesDesdeRetiro" class="buttonStyle"><i class="fa-solid fa-arrow-left"></i>
+                    Volver</button>
+            </div>
+        </div>
+
+        <div class="headRetiros">
+            <div id="retiroRapido" class="gridRetiros">
+                <div>
+                    <h2 class="headInput">Monto a retirar</h2>
+                    <input type="number" autocomplete="off" id="montoRetiro" placeholder="S/ 0" required />
+                </div>
+
+                <div class="operaRet">
+                    <button id="retiro20" class="buttonRetiro">20 soles</button>
+                </div>
+                <div class="operaRet">
+                    <button id="retiro50" class="buttonRetiro">50 soles</button>
+                </div>
+                <div class="buttonTop">
+                    <button id="realizarRetiro" class="buttonStyle">Confirmar</button>
+                    <div id="resultadoRetiro" class="msjError"></div>
+                </div>
+                <div class="operaRet">
+                    <button id="retiro100" class="buttonRetiro">100 soles</button>
+                </div>
+                <div class="operaRet">
+                    <button id="retiro200" class="buttonRetiro">200 soles</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pantallaResultadoDeposito" class="pantalla container bodySalida">
+        <div class="contRet">
+            <div class="topGridRet">
+                <div>
+                    <h2>Depósito realizado</h2>
+                    <div id="mensajeResultadoDeposito" class="buttonTopSalida"></div>
+                    <div class="posButton">
+                        <button id="volverOperacionesDesdeDeposito" class="buttonStyle"><i
+                                class="fa-solid fa-arrow-left"></i> Volver</button>
+                    </div>
+                </div>
+            </div>
+            <div class="buttonTop">
+                <button id="salirDesdeDeposito" class="buttonStyle">Salir <i
+                        class="fa-solid fa-arrow-right-to-bracket"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="pantallaResultadoRetiro" class="pantalla container bodySalida">
+        <div class="contRet">
+            <div class="topGridRet">
+                <div>
+                    <h2>Retira tu efectivo</h2>
+                    <div id="mensajeResultadoRetiro" class="buttonTopSalida"></div>
+                    <div class="posButton">
+                        <button id="volverOperacionesDesdeResultadoRetiro" class="buttonStyle"><i
+                                class="fa-solid fa-arrow-left"></i> Volver</button>
+                    </div>
+                </div>
+            </div>
+            <div class="buttonTop">
+                <button id="salirDesdeRetiro" class="buttonStyle">Salir <i
+                        class="fa-solid fa-arrow-right-to-bracket"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

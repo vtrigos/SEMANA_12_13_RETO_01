@@ -1,0 +1,356 @@
+@font-face {
+  font-family: "flexo";
+  src: url("font/Flexo-Regular.woff2") format("woff2"), url("font/Flexo-Regular.woff") format("woff"), url("font/Flexo-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "flexo", sans-serif;
+  background-color: #242424;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h2 {
+  font-family: "flexo", sans-serif;
+  font-size: 40px;
+}
+
+hr {
+  border: 0;
+  height: 4px;
+  background-color: #012d76;
+  margin-top: 25px;
+  width: 50px;
+}
+
+input {
+  width: 300px;
+  padding: 8px;
+  font-family: "flexo", sans-serif;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+
+.container {
+  width: 1000px;
+  height: 735px;
+}
+
+.bodyBienvenida {
+  background-image: url("./pantallas/screen01.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bodyWait {
+  background-image: url("./pantallas/screen07.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bodyPassword {
+  background-image: url("./pantallas/screen04.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bodyPassOk {
+  background-image: url("./pantallas/screen08.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.textPant {
+  font-size: 24px;
+  padding: 10px 0 30px;
+}
+
+.buttonStyle {
+  width: 180px;
+  height: 46px;
+  padding: 0px 20px;
+  font-family: "flexo", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.posButton {
+  padding-top: 60px;
+}
+
+.buttonTop {
+  padding-top: 20px;
+}
+
+.buttonBienvenida {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding-bottom: 250px;
+  padding-right: 100px;
+}
+
+.bodyDni {
+  background-image: url("./pantallas/screen02.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contDni,
+.contPass,
+.contRet {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 20px;
+}
+
+.topGridDni,
+.topGridPass,
+.topGridRet {
+  padding-top: 250px;
+  padding-left: 50px;
+}
+
+.bodyAviso {
+  background-image: url("./pantallas/screen03.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.buttonAviso {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding-bottom: 140px;
+  padding-right: 145px;
+}
+
+.bodyOperaciones {
+  background-image: url("./pantallas/screen06.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.buttonStyleOper01 {
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 25px;
+  font-family: "flexo", sans-serif;
+  font-size: 30px;
+  color: #012d76;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonStyleOper02 {
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 25px;
+  font-family: "flexo", sans-serif;
+  font-size: 30px;
+  color: #ffffff;
+  background-color: #ef7720;
+  border-radius: 10px;
+  border: none;
+}
+.buttonStyleOper02 p:first-of-type {
+  padding-bottom: 10px;
+}
+
+.textStyleOpera02 {
+  padding-left: 18px;
+  font-size: 21px;
+}
+
+.buttonStyleOper03 {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 25px;
+  font-family: "flexo", sans-serif;
+  font-size: 30px;
+  color: #012d76;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.gridOperaciones {
+  padding-left: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.operacion:nth-child(1) {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.operacion:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.operacion:nth-child(3) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.operacion:nth-child(4) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.headOperaciones,
+.headDeposito,
+.headRetirosF {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 80px 30px;
+}
+
+.textHeadOper {
+  font-size: 24px;
+}
+
+.gridRetiros {
+  padding-left: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.operaRet:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  padding: 0 4px 0 30px;
+}
+
+.operaRet:nth-child(3) {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  padding: 0 30px 0 4px;
+}
+
+.operaRet:nth-child(5) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  padding: 0 4px 0 30px;
+}
+
+.operaRet:nth-child(6) {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  padding: 0 30px 0 4px;
+}
+
+.headRetiros {
+  padding-top: 150px;
+  padding-left: 30px;
+}
+
+.buttonRetiro {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "flexo", sans-serif;
+  font-size: 30px;
+  color: #ffffff;
+  background-color: #ef7720;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.headInput {
+  padding-bottom: 12px;
+}
+
+.bodyDeposito {
+  background-image: url("./pantallas/screen09.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.inputDeposito {
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  padding-left: 70px;
+}
+.inputDeposito h2 {
+  padding-bottom: 15px;
+}
+
+.topDeposito {
+  padding-top: 50px;
+}
+
+.bodySalida {
+  background-image: url("./pantallas/screen05.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.buttonTopSalida {
+  padding-top: 8px;
+  font-size: 18px;
+}
+
+.pantalla {
+  display: none;
+}
+
+.pantallOn {
+  display: block;
+}
+
+.pantallOff {
+  display: none;
+}
+
+.msjError {
+  color: #f3d103;
+  margin-top: 10px;
+}/*# sourceMappingURL=styles.css.map */
